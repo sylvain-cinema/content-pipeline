@@ -1,0 +1,37 @@
+# Sylvain VISIONNAIRE Format Specification
+# Flagship luxury tier — reference-quality mastering
+
+tier: visionnaire
+description: "Flagship luxury cinema format — reference quality"
+
+video:
+  resolution:
+    width: 15360
+    height: 8640
+  color_space: rec2020
+  color_depth_bits: 12
+  hdr:
+    format: pq
+    peak_nits: 10000
+    min_nits: 0.001
+  frame_rate: 120
+  codec: av1
+  bitrate_mbps: 500
+
+audio:
+  format: sonora_wfs
+  channels: 2048
+  sample_rate: 48000
+  bit_depth: 24
+  spatial_resolution_cm: 2
+
+sentio:
+  emotional_metadata: required
+  scene_classification: required
+  orchestration_track: required
+
+certification:
+  min_resolution: 15360x8640
+  min_peak_nits: 10000
+  color_gamut_coverage: 0.998  # 99.8% Rec.2020
+  audio_channel_minimum: 2048

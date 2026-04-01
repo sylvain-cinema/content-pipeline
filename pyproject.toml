@@ -1,0 +1,20 @@
+[project]
+name = "sylvain-pipeline"
+version = "0.1.0"
+description = "Sylvain Content Mastering Pipeline — Ingest, Transcode, Certify, Distribute"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "Sylvain Technologies", email = "engineering@sylvain.tech" }]
+dependencies = [
+    "numpy>=1.26",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "click>=8.1",
+]
+
+[project.scripts]
+sylvain-pipeline = "pipeline.cli:main"
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
