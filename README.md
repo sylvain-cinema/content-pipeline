@@ -1,22 +1,29 @@
-<![CDATA[<div align="center">
+<div align="center">
 
-# CONTENT PIPELINE
+<img src="https://img.shields.io/badge/SYLVAIN-CONTENT_PIPELINE-000000?style=for-the-badge&labelColor=f59e0b&color=000000" alt="CONTENT PIPELINE" height="40"/>
 
-**Sylvain Content Mastering — Ingest, Transcode, Certify, Distribute**
+### Content Mastering
 
-[![CI](https://github.com/sylvain-cinema/content-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/sylvain-cinema/content-pipeline/actions)
-[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
-[![License](https://img.shields.io/badge/License-Apache%202.0-gold.svg)](LICENSE)
+**Ingest · Transcode · Certify · Distribute**
+
+<br/>
+
+[![CI](https://github.com/sylvain-cinema/content-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/sylvain-cinema/content-pipeline/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-f59e0b?style=flat-square)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+
+<br/>
 
 *Transform any film into a Sylvain Certified immersive experience.*
+*16K upscaling · HDR grading · WFS audio spatialization · Multi-tier packaging.*
 
 </div>
 
+<br/>
+
 ---
 
-## Overview
-
-The Content Pipeline handles end-to-end mastering for Sylvain cinema format: 16K upscaling, HDR grading automation, WFS audio spatialization (Dolby Atmos → Sonora WFS), SENTIO emotional metadata generation, and multi-tier packaging for all venue formats.
+<br/>
 
 ## Pipeline
 
@@ -29,46 +36,45 @@ graph LR
     E --> F[Generate Metadata]
     F --> G[Certify]
     G --> H[Distribute]
-
-    subgraph Video
-        C
-        D
-    end
-
-    subgraph Audio
-        E
-    end
-
-    subgraph AI
-        F
-    end
 ```
+
+<br/>
 
 ## Output Formats
 
-| Tier | Resolution | HDR | Audio | Notes |
-|------|-----------|-----|-------|-------|
-| SANCTUM | 16K | PQ 10,000 nits | Sonora Elite | Bespoke mastering |
-| VISIONNAIRE | 16K × 16K | PQ 10,000 nits | Sonora WFS | Reference quality |
-| ÉTOILÉE | 8K | PQ 4,000 nits | Sonora WFS | Mass premium |
-| ATELIER | Variable | PQ/HLG | Sentio Suite | Adaptive |
+| Tier | Resolution | HDR | Audio |
+|:-----|:-----------|:----|:------|
+| **SANCTUM** | 16K | PQ 10,000 nits | Sonora Elite |
+| **VISIONNAIRE** | 16K × 16K | PQ 10,000 nits | Sonora WFS |
+| **ÉTOILÉE** | 8K | PQ 4,000 nits | Sonora WFS |
+| **ATELIER** | Variable | PQ / HLG | Sentio Suite |
+
+<br/>
 
 ## Quick Start
 
 ```bash
 pip install sylvain-pipeline
 
-# Full pipeline
 sylvain-pipeline master input.mov --tier visionnaire
-
-# Individual stages
-sylvain-pipeline ingest input.mov
-sylvain-pipeline upscale --target 16k
-sylvain-pipeline spatialize --from atmos --to wfs
-sylvain-pipeline certify --tier visionnaire
+sylvain-pipeline certify ./mastered/ --tier visionnaire
 ```
+
+<br/>
 
 ## License
 
-Apache License 2.0.
-]]>
+Licensed under the [Apache License, Version 2.0](LICENSE).
+
+<br/>
+
+---
+
+<div align="center">
+<br/>
+
+<img src="https://img.shields.io/badge/SYLVAIN-The_Future_of_Cinematic_Storytelling-000000?style=for-the-badge&labelColor=f59e0b&color=111111" alt="Sylvain"/>
+
+<sub>Every Seat is the Best Seat</sub>
+
+</div>
