@@ -27,16 +27,11 @@
 
 ## Pipeline
 
-```mermaid
-graph LR
-    A[Ingest] --> B[Analyze]
-    B --> C[Upscale]
-    C --> D[Grade HDR]
-    D --> E[Spatialize Audio]
-    E --> F[Generate Metadata]
-    F --> G[Certify]
-    G --> H[Distribute]
-```
+<div align="center">
+
+<img src="./docs/diagrams/architecture.svg" alt="Architecture" width="100%"/>
+
+</div>
 
 <br/>
 
