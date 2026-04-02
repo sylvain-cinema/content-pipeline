@@ -12,7 +12,7 @@ video:
   color_depth_bits: 12
   hdr:
     format: pq
-    peak_nits: 10000
+    peak_nits: 12000
     min_nits: 0.001
   frame_rate: 120
   codec: av1
